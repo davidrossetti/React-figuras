@@ -1,10 +1,12 @@
 
+
+import ItemList from "../../ItemList/ItemList";
 import { productos } from "../../data/productos"
 import { useEffect,useState } from "react";
 
 
-const IntemListContainer = ({greeting}) => {
-    const [productList, setProducList]= useState([])
+const ItemListContainer = ({greeting}) => {
+    const [productList, setProductList]= useState([])
     const getProductos =new Promise((res,rej) =>{
         setTimeout(() => {
             res(productos)
@@ -14,8 +16,9 @@ const IntemListContainer = ({greeting}) => {
     useEffect(() =>{
         getProductos
         .then((respuesta) => {
-            console.log(respuesta);
-            setProducList(respuesta)
+            setProductList(respuesta)
+            
+            
         })
         .catch((error) =>{
             console.log(error)
@@ -23,13 +26,14 @@ const IntemListContainer = ({greeting}) => {
 
     }, [ ])
 
+   
 
   return (
     <div>
-    
-    </div>
+        <ItemList productList={productList}/>
+</div>
   )
 
 };
 
-export default IntemListContainer
+export default ItemListContainer
