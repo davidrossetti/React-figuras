@@ -2,25 +2,43 @@ import './style.css';
 import { Link, NavLink } from 'react-router-dom';
 
 export default function NavBar() {
-    return (
-        <ul>
-            <li><Link to="/">INICIO</Link></li>
-            <li><Link to="/category/figuras-articuladas">FIGURAS ARTICULADAS</Link></li>
-            <li><Link to="/category/figuras-escalas">FIGURAS A ESCALAS</Link></li>
+  return (
+    <ul>
+      <li>
+        <NavLink
+          className={({ isActive }) => (isActive ? "active" : "inactive")}
+          to="/"
+        >
+          INICIO
+        </NavLink>
+      </li>
 
+      <li>
+        <NavLink
+          className={({ isActive }) => (isActive ? "active" : "inactive")}
+          to="/category/figura articulada"
+        >
+          FIGURAS ARTICULADAS
+        </NavLink>
+      </li>
 
-            <li>
-                <NavLink 
-                    className={({isActive}) =>
-                        isActive ? 'active' : 'inactive'
-                    }
-                    to="/category/merchandising"
-                >
-                    MERCHANDISING
-                </NavLink>    
-                    
+      <li>
+        <NavLink
+          className={({ isActive }) => (isActive ? "active" : "inactive")}
+          to="/category/figura a escala"
+        >
+          FIGURA A ESCALAS
+        </NavLink>
+      </li>
 
-            </li>
-        </ul>
-    );
+      <li>
+        <NavLink
+          className={({ isActive }) => (isActive ? "active" : "inactive")}
+          to="/category/merchandising"
+        >
+          MERCHANDISING
+        </NavLink>
+      </li>
+    </ul>
+  );
 }

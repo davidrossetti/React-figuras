@@ -6,7 +6,7 @@ export const productos = [
      "categoria": "figura articulada",
      "enStock": false,
      "oferta": 51,
-     "imagen": "imagen 1",
+     "imagen": "https://bbts1.azureedge.net/images/p/thumb/2021/09/ca3f2afc-bb2d-4bba-a503-4282fde79c32.png",
      "id": "1"
     },
     {
@@ -16,7 +16,7 @@ export const productos = [
      "categoria": "figura articulada",
      "enStock": false,
      "oferta": 17,
-     "imagen": "imagen 2",
+     "imagen": "https://bbts1.azureedge.net/images/p/thumb/2021/09/ca3f2afc-bb2d-4bba-a503-4282fde79c32.png",
      "id": "2"
     },
     {
@@ -26,7 +26,7 @@ export const productos = [
      "categoria": "figura articulada",
      "enStock": true,
      "oferta": 95,
-     "imagen": "imagen 3",
+     "imagen": "https://bbts1.azureedge.net/images/p/thumb/2021/09/ca3f2afc-bb2d-4bba-a503-4282fde79c32.png",
      "id": "3"
     },
     {
@@ -36,7 +36,7 @@ export const productos = [
      "categoria": "figura articulada",
      "enStock": true,
      "oferta": 13,
-     "imagen": "imagen 4",
+     "imagen": "https://bbts1.azureedge.net/images/p/thumb/2021/09/ca3f2afc-bb2d-4bba-a503-4282fde79c32.png",
      "id": "4"
     },
     {
@@ -46,7 +46,7 @@ export const productos = [
      "categoria": "figura a escala",
      "enStock": true,
      "oferta": 79,
-     "imagen": "imagen 5",
+     "imagen": "https://bbts1.azureedge.net/images/p/thumb/2021/09/ca3f2afc-bb2d-4bba-a503-4282fde79c32.png",
      "id": "5"
     },
     {
@@ -56,7 +56,7 @@ export const productos = [
      "categoria": "figura a escala",
      "enStock": true,
      "oferta": 93,
-     "imagen": "imagen 6",
+     "imagen": "https://bbts1.azureedge.net/images/p/thumb/2021/09/ca3f2afc-bb2d-4bba-a503-4282fde79c32.png",
      "id": "6"
     },
     {
@@ -66,7 +66,7 @@ export const productos = [
      "categoria": "figura a escala",
      "enStock": false,
      "oferta": 49,
-     "imagen": "imagen 7",
+     "imagen": "https://bbts1.azureedge.net/images/p/thumb/2021/09/ca3f2afc-bb2d-4bba-a503-4282fde79c32.png",
      "id": "7"
     },
     {
@@ -76,7 +76,7 @@ export const productos = [
      "categoria": "figura a escala",
      "enStock": false,
      "oferta": 45,
-     "imagen": "imagen 8",
+     "imagen": "https://bbts1.azureedge.net/images/p/thumb/2021/09/ca3f2afc-bb2d-4bba-a503-4282fde79c32.png",
      "id": "8"
     },
     {
@@ -86,7 +86,7 @@ export const productos = [
      "categoria": "merchandising",
      "enStock": true,
      "oferta": 90,
-     "imagen": "imagen 9",
+     "imagen": "https://bbts1.azureedge.net/images/p/thumb/2021/09/ca3f2afc-bb2d-4bba-a503-4282fde79c32.png",
      "id": "9"
     },
     {
@@ -96,7 +96,7 @@ export const productos = [
      "categoria": "merchandising",
      "enStock": true,
      "oferta": 19,
-     "imagen": "imagen 10",
+     "imagen": "https://bbts1.azureedge.net/images/p/thumb/2021/09/ca3f2afc-bb2d-4bba-a503-4282fde79c32.png",
      "id": "10"
     },
     {
@@ -106,7 +106,7 @@ export const productos = [
      "categoria": "merchandising",
      "enStock": true,
      "oferta": 17,
-     "imagen": "imagen 11",
+     "imagen": "https://bbts1.azureedge.net/images/p/thumb/2021/09/ca3f2afc-bb2d-4bba-a503-4282fde79c32.png",
      "id": "11"
     },
     {
@@ -116,7 +116,7 @@ export const productos = [
      "categoria": "merchandising",
      "enStock": true,
      "oferta": 55,
-     "imagen": "imagen 12",
+     "imagen": "https://bbts1.azureedge.net/images/p/thumb/2021/09/ca3f2afc-bb2d-4bba-a503-4282fde79c32.png",
      "id": "12"
     }
 

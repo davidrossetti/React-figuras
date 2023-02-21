@@ -3,14 +3,27 @@
 import ItemList from "../../ItemList/ItemList";
 import { productos } from "../../data/productos"
 import { useEffect,useState } from "react";
-
+import { useParams } from "react-router-dom";
 
 const ItemListContainer = ({greeting}) => {
     const [productList, setProductList]= useState([])
+    const {categoryId}=useParams()
+
     const getProductos =new Promise((res,rej) =>{
-        setTimeout(() => {
-            res(productos)
-        }, 3000)
+        if(categoryId) {
+            const filtradoProductos = productos.filter(
+                (item) => item.categoria === categoryId
+            );
+            setTimeout(() => {
+                res(filtradoProductos)
+            }, 1000);
+        } else {
+            setTimeout(() => {
+                res(productos)
+            }, 1000)
+        }
+        
+    
     });
 
     useEffect(() =>{
@@ -24,7 +37,7 @@ const ItemListContainer = ({greeting}) => {
             console.log(error)
         });
 
-    }, [ ])
+    }, [categoryId ])
 
    
 
