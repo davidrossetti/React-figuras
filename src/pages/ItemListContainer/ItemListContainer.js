@@ -5,10 +5,10 @@ import { productos } from "../../data/productos"
 import { useEffect,useState } from "react";
 import { useParams } from "react-router-dom";
 
-const ItemListContainer = ({greeting}) => {
+const ItemListContainer = () => {
     const [productList, setProductList]= useState([])
     const {categoryId}=useParams()
-
+    
     const getProductos =new Promise((res,rej) =>{
         if(categoryId) {
             const filtradoProductos = productos.filter(
@@ -43,7 +43,7 @@ const ItemListContainer = ({greeting}) => {
 
   return (
     <div>
-        <ItemList productList={productList}/>
+        {<ItemList productList={productList}/>}
 </div>
   )
 
