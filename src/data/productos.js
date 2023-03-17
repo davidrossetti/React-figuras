@@ -6,8 +6,10 @@ export const productos = [
      "categoria": "figura articulada",
      "enStock": false,
      "oferta": 51,
+     "stock": 1,
      "imagen": "https://bbts1.azureedge.net/images/p/thumb/2021/09/ca3f2afc-bb2d-4bba-a503-4282fde79c32.png",
      "id": "1"
+     
     },
     {
      "producto": "Dragon ball S.H. Figuarts Frieza (4th Form)",
@@ -16,6 +18,7 @@ export const productos = [
      "categoria": "figura articulada",
      "enStock": false,
      "oferta": 17,
+     "stock": 1,
      "imagen": "https://bbts1.azureedge.net/images/p/thumb/2021/09/ca3f2afc-bb2d-4bba-a503-4282fde79c32.png",
      "id": "2"
     },
@@ -26,6 +29,7 @@ export const productos = [
      "categoria": "figura articulada",
      "enStock": true,
      "oferta": 95,
+     "stock": 3,
      "imagen": "https://bbts1.azureedge.net/images/p/thumb/2021/09/ca3f2afc-bb2d-4bba-a503-4282fde79c32.png",
      "id": "3"
     },
@@ -36,6 +40,7 @@ export const productos = [
      "categoria": "figura articulada",
      "enStock": true,
      "oferta": 13,
+     "stock": 1,
      "imagen": "https://bbts1.azureedge.net/images/p/thumb/2021/09/ca3f2afc-bb2d-4bba-a503-4282fde79c32.png",
      "id": "4"
     },
@@ -46,6 +51,7 @@ export const productos = [
      "categoria": "figura a escala",
      "enStock": true,
      "oferta": 79,
+     "stock": 2,
      "imagen": "https://bbts1.azureedge.net/images/p/thumb/2021/09/ca3f2afc-bb2d-4bba-a503-4282fde79c32.png",
      "id": "5"
     },
@@ -56,6 +62,7 @@ export const productos = [
      "categoria": "figura a escala",
      "enStock": true,
      "oferta": 93,
+     "stock": 1,
      "imagen": "https://bbts1.azureedge.net/images/p/thumb/2021/09/ca3f2afc-bb2d-4bba-a503-4282fde79c32.png",
      "id": "6"
     },
@@ -66,6 +73,7 @@ export const productos = [
      "categoria": "figura a escala",
      "enStock": false,
      "oferta": 49,
+     "stock": 1,
      "imagen": "https://bbts1.azureedge.net/images/p/thumb/2021/09/ca3f2afc-bb2d-4bba-a503-4282fde79c32.png",
      "id": "7"
     },
@@ -76,6 +84,7 @@ export const productos = [
      "categoria": "figura a escala",
      "enStock": false,
      "oferta": 45,
+     "stock": 4,
      "imagen": "https://bbts1.azureedge.net/images/p/thumb/2021/09/ca3f2afc-bb2d-4bba-a503-4282fde79c32.png",
      "id": "8"
     },
@@ -86,6 +95,7 @@ export const productos = [
      "categoria": "merchandising",
      "enStock": true,
      "oferta": 90,
+     "stock": 2,
      "imagen": "https://bbts1.azureedge.net/images/p/thumb/2021/09/ca3f2afc-bb2d-4bba-a503-4282fde79c32.png",
      "id": "9"
     },
@@ -96,6 +106,7 @@ export const productos = [
      "categoria": "merchandising",
      "enStock": true,
      "oferta": 19,
+     "stock": 1,
      "imagen": "https://bbts1.azureedge.net/images/p/thumb/2021/09/ca3f2afc-bb2d-4bba-a503-4282fde79c32.png",
      "id": "10"
     },
@@ -106,6 +117,7 @@ export const productos = [
      "categoria": "merchandising",
      "enStock": true,
      "oferta": 17,
+     "stock": 3,
      "imagen": "https://bbts1.azureedge.net/images/p/thumb/2021/09/ca3f2afc-bb2d-4bba-a503-4282fde79c32.png",
      "id": "11"
     },
@@ -116,6 +128,7 @@ export const productos = [
      "categoria": "merchandising",
      "enStock": true,
      "oferta": 55,
+     "stock": 2,
      "imagen": "https://bbts1.azureedge.net/images/p/thumb/2021/09/ca3f2afc-bb2d-4bba-a503-4282fde79c32.png",
      "id": "12"
     }

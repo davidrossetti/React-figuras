@@ -9,23 +9,24 @@ const ItemListContainer = () => {
     const [productList, setProductList]= useState([])
     const {categoryId}=useParams()
     
-    const getProductos =new Promise((res,rej) =>{
-        if(categoryId) {
-            const filtradoProductos = productos.filter(
-                (item) => item.categoria === categoryId
-            );
-            setTimeout(() => {
-                res(filtradoProductos)
-            }, 1000);
-        } else {
-            setTimeout(() => {
-                res(productos)
-            }, 1000)
-        }
+    // const getProductos =new Promise((res,rej) =>{
+    //     if(categoryId) {
+    //         const filtradoProductos = productos.filter(
+    //             (item) => item.categoria === categoryId
+    //         );
+    //         setTimeout(() => {
+    //             res(filtradoProductos)
+    //         }, 1000);
+    //     } else {
+    //         setTimeout(() => {
+    //             res(productos)
+    //         }, 1000)
+    //     }
         
     
-    });
+    // });
 
+    
     useEffect(() =>{
         getProductos
         .then((respuesta) => {

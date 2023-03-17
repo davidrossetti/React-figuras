@@ -17,7 +17,6 @@ const [detailObject, setDetailObject]=useState({});
     useEffect (() =>{
       getProduct
       .then((response) =>{
-        console.log(response)
         setDetailObject(response);
       })
       .catch((error) =>{
