@@ -18,7 +18,6 @@ const ItemDetail = ({detail}) => {
       <h2>{detail.producto}</h2>
       <h2>{detail.categoria}</h2>
       <h2>{detail.precioUSD}</h2>
-      {console.log(detail.stock)}
       <ItemCount count={count} setCount={setCount}/>
       <button disabled={count > detail.stock ? true: false} onClick={() => navigate('/')}>Seguir comprando</button>
       <button onClick={()=> addItem(detail, count)}>Agregar al carrito</button>

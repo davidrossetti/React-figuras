@@ -1,44 +1,66 @@
 
 
 import ItemList from "../../ItemList/ItemList";
-import { productos } from "../../data/productos"
 import { useEffect,useState } from "react";
 import { useParams } from "react-router-dom";
+import {getFirestore, getDocs, collection, query, where} from 'firebase/firestore'
+
 
 const ItemListContainer = () => {
     const [productList, setProductList]= useState([])
     const {categoryId}=useParams()
     
-    // const getProductos =new Promise((res,rej) =>{
-    //     if(categoryId) {
-    //         const filtradoProductos = productos.filter(
-    //             (item) => item.categoria === categoryId
-    //         );
-    //         setTimeout(() => {
-    //             res(filtradoProductos)
-    //         }, 1000);
-    //     } else {
-    //         setTimeout(() => {
-    //             res(productos)
-    //         }, 1000)
-    //     }
+
+    const getProductos = () => {
+        const db = getFirestore();
+        const querySnapshot =  collection(db, 'products')
         
-    
-    // });
-
-    
-    useEffect(() =>{
-        getProductos
-        .then((respuesta) => {
-            setProductList(respuesta)
+        if(categoryId) {
+            const filteredQuery = query(
+                querySnapshot,
+                where('categoria', '==' ,categoryId)
+            )
+            getDocs(filteredQuery)
+            .then((response) =>{
+                const list = response.docs.map((doc) => {
+                    console.log(list)
+                    return{
+                        id: doc.id,
+                        ...doc.data(),
+                    } 
+                })
+                setProductList(list)
+                //console.log(list)
+            } )
+            .catch(error => console.log(error))
+           
+        }else{
             
-            
-        })
-        .catch((error) =>{
-            console.log(error)
-        });
+            getDocs(querySnapshot)
+            .then((response) =>{
+               
+                const list = response.docs.map((doc) => {
+                    return{
+                        id: doc.id,
+                        ...doc.data(),
+                        
+                    } 
+                })
+                setProductList(list)
+            } )
+            .catch(error => console.log(error))
+        }
 
+
+       
+    }
+    
+    useEffect(() =>{ 
+        getProductos();
     }, [categoryId ])
+
+
+ 
 
    
 
