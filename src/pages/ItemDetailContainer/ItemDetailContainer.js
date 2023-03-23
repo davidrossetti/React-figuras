@@ -14,7 +14,6 @@ const [detailObject, setDetailObject]=useState({});
         const querySnapshot = doc (db, 'products', producto)
         
         getDoc(querySnapshot)
-        console.log(querySnapshot)
         .then((res) => {
           setDetailObject({
             id: res.id, ...res.data()

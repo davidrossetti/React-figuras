@@ -23,9 +23,10 @@ const Cart = () => {
         phone:'1122334455'
       },
       products: cart.map((producto) => {
+        console.log(producto)
         return{
            producto:producto.producto,
-           precioUSD:producto.precioUSD,
+           precioUSD:producto.precio,
            id:producto.id,
            quantity:producto.quantity
         }
