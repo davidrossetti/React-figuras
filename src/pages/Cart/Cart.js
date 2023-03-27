@@ -24,21 +24,25 @@ const Cart = () => {
       },
       products: cart.map((producto) => {
         console.log(producto)
+
         return{
            producto:producto.producto,
            precioUSD:producto.precio,
            id:producto.id,
-           quantity:producto.quantity
+           quantity:producto.quantity,
+           stock:producto.stock
         }
 
 
 
       }),
-      //total: cart.reduce((acc, curr) => acc + curr.precioUSD * curr.quantity, 0),
+      total: cart.reduce((acc, curr) => acc + curr.precio * curr.quantity, 0),
     })
     .then((response) => {
       console.log(response.id)
+      console.log(response.stock)
         alert(`order con id: ${response.id} creada`)
+        updateStocks();
     })
     .catch( (error) => console.log (error))
   };
@@ -46,10 +50,14 @@ const Cart = () => {
   const updateStocks = () => {
     cart.forEach( (product) => {
       const querySnapshot = doc(db , 'products' , product.id)
+      console.log(product.stock)
       updateDoc(querySnapshot, {
-        stock: product.stock - product.quantity
-      
-      }).then.catch((error) => console.log(error))
+        stock: product.stock - product.quantity     
+      })
+      .then(() => {
+        alert('El stock de los productos ha sido actualizado.')
+      })  
+      .catch((error) => console.log(error))
 
     });
   }
@@ -58,6 +66,7 @@ const Cart = () => {
     <div>
       {cart.map((producto) => (
         <div key={producto.id}>
+          
           <h2>{producto.producto}</h2>
           <h3>{producto.quantity} </h3>
           <button onClick={() => removeItem(producto.id)}>borrar producto</button>
@@ -81,3 +90,6 @@ const Cart = () => {
 };
 
 export default Cart
+
+//1:27
+ 

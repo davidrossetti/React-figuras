@@ -23,6 +23,7 @@ const CartProvider = ({children}) => {
           id: item.id,
           producto: item.producto,
           precio: item.precioUSD,
+          stock:item.stock,
           quantity:quantity,
       }
       setCart([...cart, product])
